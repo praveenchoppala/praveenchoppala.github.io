@@ -3,6 +3,84 @@
   <head><title>Dr. Praveen Choppala</title></head>
   <body style="background-color: aliceblue; color: black;">
 
+    <style>
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: steelblue;
+    padding: 10px;
+    flex-wrap: wrap;
+  }
+
+  .navbar img {
+    width: 60px;
+    border-radius: 6px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 3px 0;
+  }
+
+  @media screen and (max-width: 600px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: steelblue;
+      padding: 10px;
+    }
+
+    .nav-links.show {
+      display: flex;
+    }
+
+    .menu-toggle {
+      display: flex;
+    }
+
+    .navbar {
+      align-items: flex-start;
+    }
+  }
+</style>
+
+<div class="navbar">
+  <img src="choppala_pic.jpeg" alt="Praveen Choppala">
+  
+  <div class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+
+  <div class="nav-links">
+    <a href="#research">Research</a>
+    <a href="#students">Students</a>
+  </div>
+</div>
+
     <img src="choppala_pic.jpeg" alt="Praveen Choppala" style="width: 150px; border-radius: 8px;">
     <h1 style="margin-top: 20px;">Praveen Choppala</h1>
     
